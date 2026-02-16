@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "mychart.fullname" . }}-job
+spec:
+  backoffLimit: {{ .Values.job.backoffLimit }}
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: job
+          image: "{{ .Values.job.image }}"
+          command: {{ toJson .Values.job.command }}

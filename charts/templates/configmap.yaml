@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp
+data:
+  MESSAGE_TEXT: "Hello from ConfigMap"
+  APP_PORT: "5000"
