@@ -1,1 +1,1 @@
-# gitops-appication
+# gitops-application
